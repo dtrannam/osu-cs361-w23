@@ -1,0 +1,226 @@
+[
+    {
+      "Name": "ALABAMA",
+      "Abbreviations": "AL"
+    },
+    {
+      "Name": "ALASKA",
+      "Abbreviations": "AK"
+    },
+    {
+      "Name": "AMERICAN SAMOA",
+      "Abbreviations": "AS"
+    },
+    {
+      "Name": "ARIZONA",
+      "Abbreviations": "AZ"
+    },
+    {
+      "Name": "ARKANSAS",
+      "Abbreviations": "AR"
+    },
+    {
+      "Name": "CALIFORNIA",
+      "Abbreviations": "CA"
+    },
+    {
+      "Name": "COLORADO",
+      "Abbreviations": "CO"
+    },
+    {
+      "Name": "CONNECTICUT",
+      "Abbreviations": "CT"
+    },
+    {
+      "Name": "DELAWARE",
+      "Abbreviations": "DE"
+    },
+    {
+      "Name": "DISTRICT OF COLUMBIA",
+      "Abbreviations": "DC"
+    },
+    {
+      "Name": "FLORIDA",
+      "Abbreviations": "FL"
+    },
+    {
+      "Name": "GEORGIA",
+      "Abbreviations": "GA"
+    },
+    {
+      "Name": "GUAM",
+      "Abbreviations": "GU"
+    },
+    {
+      "Name": "HAWAII",
+      "Abbreviations": "HI"
+    },
+    {
+      "Name": "IDAHO",
+      "Abbreviations": "ID"
+    },
+    {
+      "Name": "ILLINOIS",
+      "Abbreviations": "IL"
+    },
+    {
+      "Name": "INDIANA",
+      "Abbreviations": "IN"
+    },
+    {
+      "Name": "IOWA",
+      "Abbreviations": "IA"
+    },
+    {
+      "Name": "KANSAS",
+      "Abbreviations": "KS"
+    },
+    {
+      "Name": "KENTUCKY",
+      "Abbreviations": "KY"
+    },
+    {
+      "Name": "LOUISIANA",
+      "Abbreviations": "LA"
+    },
+    {
+      "Name": "MAINE",
+      "Abbreviations": "ME"
+    },
+    {
+      "Name": "MARYLAND",
+      "Abbreviations": "MD"
+    },
+    {
+      "Name": "MASSACHUSETTS",
+      "Abbreviations": "MA"
+    },
+    {
+      "Name": "MICHIGAN",
+      "Abbreviations": "MI"
+    },
+    {
+      "Name": "MINNESOTA",
+      "Abbreviations": "MN"
+    },
+    {
+      "Name": "MISSISSIPPI",
+      "Abbreviations": "MS"
+    },
+    {
+      "Name": "MISSOURI",
+      "Abbreviations": "MO"
+    },
+    {
+      "Name": "MONTANA",
+      "Abbreviations": "MT"
+    },
+    {
+      "Name": "NEBRASKA",
+      "Abbreviations": "NE"
+    },
+    {
+      "Name": "NEVADA",
+      "Abbreviations": "NV"
+    },
+    {
+      "Name": "NEW HAMPSHIRE",
+      "Abbreviations": "NH"
+    },
+    {
+      "Name": "NEW JERSEY",
+      "Abbreviations": "NJ"
+    },
+    {
+      "Name": "NEW MEXICO",
+      "Abbreviations": "NM"
+    },
+    {
+      "Name": "NEW YORK",
+      "Abbreviations": "NY"
+    },
+    {
+      "Name": "NORTH CAROLINA",
+      "Abbreviations": "NC"
+    },
+    {
+      "Name": "NORTH DAKOTA",
+      "Abbreviations": "ND"
+    },
+    {
+      "Name": "NORTHERN MARIANA IS",
+      "Abbreviations": "MP"
+    },
+    {
+      "Name": "OHIO",
+      "Abbreviations": "OH"
+    },
+    {
+      "Name": "OKLAHOMA",
+      "Abbreviations": "OK"
+    },
+    {
+      "Name": "OREGON",
+      "Abbreviations": "OR"
+    },
+    {
+      "Name": "PENNSYLVANIA",
+      "Abbreviations": "PA"
+    },
+    {
+      "Name": "PUERTO RICO",
+      "Abbreviations": "PR"
+    },
+    {
+      "Name": "RHODE ISLAND",
+      "Abbreviations": "RI"
+    },
+    {
+      "Name": "SOUTH CAROLINA",
+      "Abbreviations": "SC"
+    },
+    {
+      "Name": "SOUTH DAKOTA",
+      "Abbreviations": "SD"
+    },
+    {
+      "Name": "TENNESSEE",
+      "Abbreviations": "TN"
+    },
+    {
+      "Name": "TEXAS",
+      "Abbreviations": "TX"
+    },
+    {
+      "Name": "UTAH",
+      "Abbreviations": "UT"
+    },
+    {
+      "Name": "VERMONT",
+      "Abbreviations": "VT"
+    },
+    {
+      "Name": "VIRGINIA",
+      "Abbreviations": "VA"
+    },
+    {
+      "Name": "VIRGIN ISLANDS",
+      "Abbreviations": "VI"
+    },
+    {
+      "Name": "WASHINGTON",
+      "Abbreviations": "WA"
+    },
+    {
+      "Name": "WEST VIRGINIA",
+      "Abbreviations": "WV"
+    },
+    {
+      "Name": "WISCONSIN",
+      "Abbreviations": "WI"
+    },
+    {
+      "Name": "WYOMING",
+      "Abbreviations": "WY"
+    }
+  ]
