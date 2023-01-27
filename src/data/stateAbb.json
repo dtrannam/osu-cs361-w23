@@ -8,10 +8,6 @@
       "Abbreviations": "AK"
     },
     {
-      "Name": "AMERICAN SAMOA",
-      "Abbreviations": "AS"
-    },
-    {
       "Name": "ARIZONA",
       "Abbreviations": "AZ"
     },
@@ -46,10 +42,6 @@
     {
       "Name": "GEORGIA",
       "Abbreviations": "GA"
-    },
-    {
-      "Name": "GUAM",
-      "Abbreviations": "GU"
     },
     {
       "Name": "HAWAII",
@@ -148,10 +140,6 @@
       "Abbreviations": "ND"
     },
     {
-      "Name": "NORTHERN MARIANA IS",
-      "Abbreviations": "MP"
-    },
-    {
       "Name": "OHIO",
       "Abbreviations": "OH"
     },
@@ -166,10 +154,6 @@
     {
       "Name": "PENNSYLVANIA",
       "Abbreviations": "PA"
-    },
-    {
-      "Name": "PUERTO RICO",
-      "Abbreviations": "PR"
     },
     {
       "Name": "RHODE ISLAND",
@@ -202,10 +186,6 @@
     {
       "Name": "VIRGINIA",
       "Abbreviations": "VA"
-    },
-    {
-      "Name": "VIRGIN ISLANDS",
-      "Abbreviations": "VI"
     },
     {
       "Name": "WASHINGTON",
