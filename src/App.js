@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import states from "./data/stateAbb.json"
 import jobs from "./data/salary.json"
 import InputLabel from "@mui/material/InputLabel";
@@ -14,13 +14,13 @@ import MenuItem from '@mui/material/MenuItem';
 
 function App() {
 
-  const [search, setSearch] = useState({value: ""})
+  const [search, setSearch] = useState("")
   const [filterBy, setFilterBy] = useState({value: 'name'})
   const [filterState, setfilterState] = useState({value: `CA`})
+  const [jobFilter, setJobFilters] = useState(jobs)
 
   function onChangeSearch(event) {
     setSearch(event.target.value)
-    console.log(search)
   }
 
   function onChangeFilterBy(event) {
@@ -31,12 +31,28 @@ function App() {
     setfilterState({value: event.target.value})
   }
 
+
+  useEffect(() => {
+    let tempData = jobs
+    if (filterBy.value === 'name') {
+      tempData = tempData.filter(job => job.Title.toLowerCase().includes(search.toLowerCase()))
+    } else if (filterBy.value === 'income' && isNaN(search)) {
+      // Value is searching for an income, but the search field is not a number
+      alert("Enter a number if searching by Income")
+    } else {
+      // job.Annual.replace(",", "") - 5000 <= search || search >= job.Annual.replace(",", "") + 5000
+      tempData = tempData.filter(job => parseInt(job.Annual.replace(",", "")) >= parseInt(search))
+    }
+    setJobFilters(tempData)
+  
+  }, [search, filterBy, filterState])
+
   var baseURL = "https://www.bls.gov/oes/current/oes_nat.htm"
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>My App Name</h1>
+        <h1>Income Search App</h1>
         <form>
           <InputLabel>Filter By</InputLabel>
           <Select onChange={onChangeFilterBy} value={filterBy.value}>
@@ -54,6 +70,9 @@ function App() {
           </Select>
 
         </form>
+        <p>
+          Data used from this website is pulled directly from the US Bureau of Labor Statistics May 2021 Report (https://www.bls.gov/oes/current/oes_nat.htm).
+        </p>
         <TableContainer>
           <Table>
             <TableHead>
@@ -66,17 +85,16 @@ function App() {
             </TableHead>
             <TableBody>
                 {
-                  jobs.map(row => {
+                  jobFilter.map(row => {
                     return <TableRow key={row.Code}>
                       <TableCell>
                           <a href={`https://www.bls.gov/oes/current/oes${row.Code}.htm`}> {row.Title} </a>
                       </TableCell>
-                      <TableCell>{row.Annual}</TableCell>
-                      <TableCell>Value for Later</TableCell>
-                      <TableCell>{row.Median}</TableCell>
-                      <TableCell>{row.Mean}</TableCell>
-                      <TableCell>{row.Annual}</TableCell>
-                      <TableCell>{row.EmploymentPer1000}</TableCell>
+                      <TableCell>${row.Annual}</TableCell>
+                      <TableCell>N/A</TableCell>
+                      <TableCell>${row.Median}</TableCell>
+                      <TableCell>${row.Mean}</TableCell>
+                      <TableCell>${row.EmploymentPer1000}</TableCell>
                     </TableRow>
                   }
                   )
