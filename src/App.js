@@ -70,9 +70,8 @@ function App() {
           </Select>
 
         </form>
-        <p>
-          Data used from this website is pulled directly from the US Bureau of Labor Statistics May 2021 Report (https://www.bls.gov/oes/current/oes_nat.htm).
-        </p>
+          Data used from this website is pulled directly from the US Bureau of Labor Statistics May 2021 Report (https://www.bls.gov/oes/current/oes_nat.htm). This project expands on the BLS gov site by allowing better searching through income or a job title search.
+          Note: This data is from the May 2021 Report and may not be up to date
         <TableContainer>
           <Table>
             <TableHead>
@@ -87,7 +86,7 @@ function App() {
                 {
                   jobFilter.map(row => {
                     return <TableRow key={row.Code}>
-                      <TableCell>
+                      <TableCell onClick={() => alert("You are navigating away from this site and onto the BLS gov site.")}>
                           <a href={`https://www.bls.gov/oes/current/oes${row.Code}.htm`}> {row.Title} </a>
                       </TableCell>
                       <TableCell>${row.Annual}</TableCell>
