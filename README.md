@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# CS361 W22 Project David Trannam
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CS361 W22 Project by David Trannam. A react application that allows users to search/filter data from the Bureau of Labor Statistics. Data is pulled directly from the May 2021 National Occupational Employment and Wage Estimates Report (https://www.bls.gov/oes/current/oes_nat.htm)
 
-## Available Scripts
+## Getting Started 
 
-In the project directory, you can run:
+1. Download/Install Node.js (https://nodejs.org/en/download/)
+2. Clone the Repo
+3. Download the dependencies by running the below command at the root of the project
 
-### `npm start`
+      > npm install 
+      
+      
+### Running the Web App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run the following command and navigate to http://localhost:3000/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    > npm start
+    
+    
+### Running the Web Service
 
-### `npm test`
+Run the following command and send get requests to http://localhost:5000/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    > node service.js
+    
+## Web Service Details
 
-### `npm run build`
+Follow the steps found in "Running the Web Service" section to start the service. The service can be ran independently of the web app step.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How to REQUEST data 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ensure that the web service is running. Request to the data is done via standard HTTP calls. This app has only one endpoint (**http://localhost:5000/**) which accepts only a **GET** request. Optional query parameters can be found below:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Parameter Name      | Example Value | Notes|
+| ----------- | ----------- | ----------- 
+| *null*      | *null*       | Returns all the data |
+| title      | Software       | Returns JSON data where the title matches the example value. This is not case sensitive |
+| salary   | 50000        |Returns JSON data where the annual salary is +/- 5000 from the salary information  |
 
-### `npm run eject`
+### How to RECEIVE data
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Data is sent back in a standard JSON format and will indicate code of 200 regardless if a match is found or not after a GET request is sent. Below is an example:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+``` javascript
+  [
+    {
+        "Code": 151252,
+        "Title": "Software Developers",
+        "Employment": "1,364,180",
+        "EmploymentPer1000": 9.68,
+        "Median": "58",
+        "Mean": "58.17",
+        "Annual": "120,990"
+    },
+    {
+        "Code": 151254,
+        "Title": "Web Developers",
+        "Employment": "84,820",
+        "EmploymentPer1000": 0.6,
+        "Median": "37",
+        "Mean": "39.09",
+        "Annual": "81,320"
+    }
+    ]
+```
+*GET Request to http://localhost:5000/?title=developer*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### UML sequence diagram
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![UML Diagram](CS361 - UML Diagram - David Trannam.png)
