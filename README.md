@@ -68,4 +68,4 @@ Data is sent back in a standard JSON format and will indicate code of 200 regard
 
 ### UML sequence diagram
 
-![UML Diagram](CS361 - UML Diagram - David Trannam.png)
+![UML Diagram](https://github.com/dtrannam/osu-cs361-w23/blob/4482c2558a66ee21f186d957db257b9072219a23/CS361%20-%20UML%20Diagram%20-%20David%20Trannam.png)
