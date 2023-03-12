@@ -1,0 +1,21 @@
+.Header {
+    background-color: #B4D4EE;
+    font-size: larger;
+}
+
+:root {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+p {
+    font-size: large;
+}
+
+h1, form {
+    text-align: center;
+}
+
+.Row:nth-child(even) {
+    background-color: lightgray;
+}
